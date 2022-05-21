@@ -3,6 +3,7 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { NavLink } from 'react-router-dom';
 import auth from '../../firebase.init';
+import logo from  '../../assets/images/logo.png'
 
 const Navbar = () => {
     const [user, loading, error] = useAuthState(auth);
@@ -13,10 +14,10 @@ const Navbar = () => {
     }
     const menuItems = <>
         <li className='mx-2'><NavLink to='/' >Home</NavLink></li>
-        <li className='mx-2'><NavLink to='/appointment' >Appointment</NavLink></li>
+        <li className='mx-2'><NavLink to='/parches' >Parches</NavLink></li>
         <li className='mx-2'><NavLink to='/Review' >Review</NavLink></li>
         <li className='mx-2'><NavLink to='/Contact' >Contact</NavLink></li>
-        <li className='mx-2'><NavLink to='/About' >About</NavLink></li>
+        <li className='mx-2'><NavLink to='/blog' >Blog</NavLink></li>
         {user && <li className='mx-2'><NavLink to='/dashboard' >Dashboard</NavLink></li>}
         <li className='mx-2'>
           {
@@ -28,7 +29,7 @@ const Navbar = () => {
         </li>
     </>
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-blue-200 w-full">
             <div className="navbar-start">
                 <div className="dropdown">
                 <label tabindex="0" className="btn btn-ghost lg:hidden">
@@ -38,14 +39,16 @@ const Navbar = () => {
                     {menuItems}
                 </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">Doctors Portal</a>
+                <a className="btn btn-ghost normal-case text-xl">
+                    <img src={logo} alt="" />
+                </a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal font-bold p-0">
                     {menuItems}
                 </ul>
             </div>
-            <div className="navbar-end">
+            <div className="navbar-end lg:hidden">
                 <label tabindex="1" for="dashboard-sidebar" className="btn btn-ghost lg:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                 </label>

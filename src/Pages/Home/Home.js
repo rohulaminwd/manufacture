@@ -1,11 +1,12 @@
 import React from 'react';
 import Footer from '../Shared/Footer';
+import Banner from './Banner';
 
 
 const Home = () => {
     return (
         <div className=''>
-            <h1>hello word</h1>
+            <Banner></Banner>
             <Footer />
         </div>
     );

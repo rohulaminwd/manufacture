@@ -11,6 +11,12 @@ import RequireAdmin from './Pages/Login/RequireAdmin'
 import Parches from './Pages/Parches/Parches';
 import Users from './Pages/Dashboard/Users';
 import Dashboard from './Pages/Dashboard/Dashboard';
+import MyProfile from './Pages/Dashboard/MyProfile';
+import MyOrders from './Pages/Dashboard/MyOrders';
+import AddReview from './Pages/Dashboard/AddReview';
+import ManageOrder from './Pages/Dashboard/ManageOrder';
+import ManageProduct from './Pages/Dashboard/ManageProduct';
+import AddProduct from './Pages/Dashboard/AddProduct';
 
 
 function App() {
@@ -29,11 +35,13 @@ function App() {
             <Dashboard />
           </RequireAuth>
         }>
-          {/* <Route path='/dashboard/appointment' element={<MyAppoinment />}></Route>
-          <Route path='myReview' element={<MyReview />}></Route> */}
-          <Route path='users' element={<RequireAdmin><Users /></RequireAdmin>}></Route>
-          {/* <Route path='doctors' element={<RequireAdmin><AddDoctors /></RequireAdmin>}></Route>
-          <Route path='managedoctor' element={<RequireAdmin><ManageDoctor /></RequireAdmin>}></Route> */}
+          <Route index element={<MyProfile />}></Route>
+          <Route path='myOrder' element={<MyOrders />}></Route>
+          <Route path='addReview' element={<AddReview />}></Route>
+          <Route path='users' element={<RequireAdmin> <Users /></RequireAdmin>}></Route>
+          <Route path='addProduct' element={<RequireAdmin> <AddProduct /></RequireAdmin>}></Route>
+          <Route path='manageOrder' element={<RequireAdmin><ManageOrder /></RequireAdmin>}></Route>
+          <Route path='manageProduct' element={<RequireAdmin><ManageProduct /></RequireAdmin>}></Route>
         </Route>
       </Routes>
       <ToastContainer />

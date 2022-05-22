@@ -2,18 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ToolsCard = ({tool}) => {
-    const {img, _id, name, title, max_quantity, min_quantity, price} = tool;
+    const {img, _id, name, description, max_quantity, min_quantity, price} = tool;
     return (
         <div>
-            <div class="card p-3 bg-base-100 border border-blue-200 hover:shadow-md hover:translate-y-[-5px] transition">
+            <div class="card p-3 bg-base-100 border h-full border-blue-200 hover:shadow-md hover:translate-y-[-5px] transition">
                 <div className="flex border-blue-300 border-b">
                     <figure class="w-[40%]">
                         <img src={img} alt="Shoes" class="rounded-xl" />
                     </figure>
                     <div class="w-[60%] pl-3 text-start flex items-center">
                         <div className="">
-                        <h2 class="text-xl text-secondary mb-0 font-bold">{name}</h2>
-                        <small className='text-gary-300'>{title}</small>
+                        <h2 class="text-xl text-secondary mb-0 font-bold">{name.slice(0, 15)}</h2>
+                        <small className='text-gary-300'>{description.slice(0, 80)}...</small>
                         </div>
                     </div>
                 </div>

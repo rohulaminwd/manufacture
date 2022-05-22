@@ -2,9 +2,19 @@ import React from 'react';
 
 const Parches = () => {
     return (
-        <div>
+        <div className='mt-16'>
             <h1>
-                parches
+                <h1>Parses now</h1>
+                <h1>Parses now</h1>
+                <h1>Parses now</h1>
+                <h1>Parses now</h1>
+                <h1>Parses now</h1>
+                <h1>Parses now</h1>
+                <h1>Parses now</h1>
+                <h1>Parses now</h1>
+                <h1>Parses now</h1>
+                <h1>Parses now</h1>
+                <h1>Parses now</h1>
             </h1>
         </div>
     );

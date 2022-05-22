@@ -14,7 +14,7 @@ const Navbar = () => {
     }
     const menuItems = <>
         <li className='mx-2'><NavLink to='/' >Home</NavLink></li>
-        <li className='mx-2'><NavLink to='/parches' >Parches</NavLink></li>
+        <li className='mx-2'><NavLink to='/parses' >Parses</NavLink></li>
         <li className='mx-2'><NavLink to='/Review' >Review</NavLink></li>
         <li className='mx-2'><NavLink to='/Contact' >Contact</NavLink></li>
         <li className='mx-2'><NavLink to='/blog' >Blog</NavLink></li>
@@ -29,7 +29,8 @@ const Navbar = () => {
         </li>
     </>
     return (
-        <div className="navbar bg-blue-200 w-full">
+        <div className="fixed top-0 z-50 left-0 bg-blue-200 w-full">
+            <div className="navbar max-w-7xl mx-auto">
             <div className="navbar-start">
                 <div className="dropdown">
                 <label tabindex="0" className="btn btn-ghost lg:hidden">
@@ -53,6 +54,7 @@ const Navbar = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                 </label>
             </div>
+        </div>
         </div>
     );
 };

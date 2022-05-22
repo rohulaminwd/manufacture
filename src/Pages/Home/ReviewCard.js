@@ -7,7 +7,7 @@ const ReviewCard = ({review}) => {
         <div>
             <div class="card bg-base-100 text-center border hover:shadow-md hover:translate-y-[-5px] transition border-blue-200">
             <div class="avatar flex justify-center mt-5">
-                <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                <div class="w-16 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                     <img src="https://api.lorem.space/image/face?hash=3174" />
                 </div>
             </div>

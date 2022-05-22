@@ -17,6 +17,7 @@ const Login = () => {
         error,
       ] = useSignInWithEmailAndPassword(auth);
     const [token] = useToken(user || gUser);
+    console.log(token)
     let signInError; 
     const navigate = useNavigate()
     const location = useLocation() 
@@ -37,7 +38,6 @@ const Login = () => {
     }
 
     const onSubmit = data => {
-        console.log(data);
         signInWithEmailAndPassword(data.email, data.password)
     }
     return (

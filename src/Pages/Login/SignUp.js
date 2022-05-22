@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import Loading from '../Shared/Loading';
 import useToken from '../../Hooks/useToken';
 import { Link, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const SignUp = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -31,6 +32,7 @@ const SignUp = () => {
     if(token){
         navigate('/appointment')
     }
+    
 
     const onSubmit = async data => {
         // console.log(data);

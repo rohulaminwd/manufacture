@@ -7,7 +7,10 @@ import Login from './Pages/Login/Login';
 import SignUp from './Pages/Login/SignUp';
 import Navbar from './Pages/Shared/Navbar';
 import RequireAuth from './Pages/Login/RequireAuth'
+import RequireAdmin from './Pages/Login/RequireAdmin'
 import Parches from './Pages/Parches/Parches';
+import Users from './Pages/Dashboard/Users';
+import Dashboard from './Pages/Dashboard/Dashboard';
 
 
 function App() {
@@ -21,6 +24,17 @@ function App() {
         <Route path='/parses/:id' element={
           <RequireAuth><Parches /></RequireAuth>
         }></Route>
+        <Route path='/dashboard' element={
+          <RequireAuth>
+            <Dashboard />
+          </RequireAuth>
+        }>
+          {/* <Route path='/dashboard/appointment' element={<MyAppoinment />}></Route>
+          <Route path='myReview' element={<MyReview />}></Route> */}
+          <Route path='users' element={<RequireAdmin><Users /></RequireAdmin>}></Route>
+          {/* <Route path='doctors' element={<RequireAdmin><AddDoctors /></RequireAdmin>}></Route>
+          <Route path='managedoctor' element={<RequireAdmin><ManageDoctor /></RequireAdmin>}></Route> */}
+        </Route>
       </Routes>
       <ToastContainer />
     </div>

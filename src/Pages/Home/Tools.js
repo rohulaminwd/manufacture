@@ -4,40 +4,12 @@ import Loading from '../Shared/Loading';
 import { useQuery } from 'react-query';
 
 const Tools = () => {
-    // const products = [
-    //     {
-    //         _id: 1,
-    //         name: "Car while",
-    //         title: " New balce fress from car prats this is nice car tools",
-    //         price: 170,
-    //         img: parts1,
-    //         min_quantity: 20,
-    //         max_quantity: 190,
-    //     },
-    //     {
-    //         _id: 2,
-    //         name: "Car while",
-    //         title: " New balce fress from car prats this is nice car tools",
-    //         price: 170,
-    //         img: parts2,
-    //         min_quantity: 20,
-    //         max_quantity: 190,
-    //     },
-    //     {
-    //         _id: 3,
-    //         name: "Car while",
-    //         title: " New balce fress from car prats this is nice car tools",
-    //         price: 170,
-    //         img: parts3,
-    //         min_quantity: 20,
-    //         max_quantity: 190,
-    //     },
-    // ]
-    const {data: products, isLoading, refetch} = useQuery('product', () => fetch('http://localhost:5000/product', {
+    const {data: products, isLoading} = useQuery('product', () => fetch('http://localhost:5000/product', {
         headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`
         }
     }).then(res => res.json()))
+
     if(isLoading){
         return <Loading />
     }

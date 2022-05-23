@@ -16,7 +16,7 @@ const ManageProduct = () => {
     }
     return (
         <div>
-            <h1 className='text-xl mb-3 font-bold text-orange-500'>manage doctor: {products?.length}</h1>
+            <h1 className='text-xl mb-3 font-bold text-orange-500'>Product: {products?.length}</h1>
             <div class="overflow-x-auto w-full">
                 <table class="table w-full">
                     <thead>

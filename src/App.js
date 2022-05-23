@@ -17,6 +17,8 @@ import AddReview from './Pages/Dashboard/AddReview';
 import ManageOrder from './Pages/Dashboard/ManageOrder';
 import ManageProduct from './Pages/Dashboard/ManageProduct';
 import AddProduct from './Pages/Dashboard/AddProduct';
+import Blog from './Pages/Blog/Blog';
+import Protfolio from './Pages/Protfolio/Protfolio';
 
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/login' element={<Login />}></Route>
+        <Route path='/blog' element={<Blog />}></Route>
+        <Route path='/Portfolio' element={<Protfolio />}></Route>
         <Route path='/signup' element={<SignUp />}></Route>
         <Route path='/parses/:id' element={
           <RequireAuth><Parches /></RequireAuth>

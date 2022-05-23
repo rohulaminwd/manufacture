@@ -1,40 +1,28 @@
 import React from 'react';
-import parts from '../../assets/images/parts (1).jpg'
+import { useQuery } from 'react-query';
+import Loading from '../Shared/Loading';
 import ReviewCard from './ReviewCard';
 
 const Review = () => {
-    const reviews = [
-        {
-            name: "Rohul amin",
-            describe: "this is nice product This is easy and confortable use thank you so much for hepl",
-            img: parts,
-            ratting: [1, 1, 1, 1,],
-        },
-        {
-            name: "Rohul amin",
-            describe: "this is nice product This is easy and confortable use thank you so much for hepl",
-            img: parts,
-            ratting: [1, 1, 1, 1,],
-        },
-        {
-            name: "Rohul amin",
-            describe: "this is nice product This is easy and confortable use thank you so much for hepl",
-            img: parts,
-            ratting: [1, 1, 1, 1,],
-        },
-        {
-            name: "Rohul amin",
-            describe: "this is nice product This is easy and confortable use thank you so much for hepl",
-            img: parts,
-            ratting: [1, 1, 1, 1,],
-        },
-    ]
+    const {data: reviews, isLoading} = useQuery('review', () => fetch('http://localhost:5000/review', {
+        headers: {
+            'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+        }
+    }).then(res => res.json()))
+    if(isLoading){
+        return <Loading />
+    }
+    // let arr = [];
+    // for(let i = 0; i < reviews.length - 1; i++){
+    //     const element = reviews[i];
+    //     arr = arr.push(element)
+    // }
     return (
         <div className='my-10'>
             <h1 className='text-2xl font-bold text-center mb-4'>What Say Customer..?</h1>
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {
-                    reviews.map(review => <ReviewCard
+                    reviews?.slice(0, 8).map(review => <ReviewCard
                         key={review._id}
                         review={review}
                         ></ReviewCard>)

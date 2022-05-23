@@ -14,6 +14,7 @@ const ManageProduct = () => {
     if(isLoading){
         return <Loading />
     }
+    const metohd = 'product'
     return (
         <div>
             <h1 className='text-xl mb-3 font-bold text-orange-500'>Product: {products?.length}</h1>
@@ -53,6 +54,7 @@ const ManageProduct = () => {
                 deletingModal={deletingModal} 
                 refetch={refetch} 
                 setDeletingModal={setDeletingModal}
+                method={metohd}
                 />
             }
         </div>

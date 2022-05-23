@@ -38,7 +38,7 @@ const BusnessSummery = () => {
                             <img src={items.img} className='w-full' alt="" />
                         </div>
                         <div className="">
-                            <h1 className='text-4xl font-bold text-primary mx-2'>{items.quantity}</h1>
+                            <h1 className='text-4xl font-bold text-primary my-3'>{items.quantity}</h1>
                             <h1 className='text-xl text-purple-500 font-bold'>{items.name}</h1>
                         </div>
                     </div>)

@@ -10,7 +10,7 @@ const MyProfile = () => {
         <div>
             <h1 className='text-2xl font-bold text-primary text-center'>My Profile</h1>
             <div class="card w-[100%] mt-16 mx-auto lg:w-[500px] bg-base-100 border-8 border border-blue-200 rounded-2xl shadow-xl" data-aos="zoom-in-up" data-aos-delay="100" data-aos-duration="800">
-                <div className="avatar mt-5">
+                <div className="avatar online mt-5">
                     <div class="w-28 mx-auto rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                         { user.photoURL? <img src={user.photoURL} alt='Profile pic' /> : <img src={profile} alt='Profile pickter' />}
                     </div>
@@ -68,7 +68,7 @@ const MyProfile = () => {
                             <a href="https://gymnasium-99909.firebaseapp.com/" className='border p-3 border-x-8 border-blue-200 rounded-full'>
                                 <h1 className='text-blue-500 mb-0 font-bold flex items-center'>Gymnasium</h1>
                             </a>
-                            <a href="https://grocery-stock-90a1c.web.app/" className='border p-3 border-x-8 border-blue-200 rounded-full'>
+                            <a href="https://red-onion-ff595.web.app" className='border p-3 border-x-8 border-blue-200 rounded-full'>
                                 <h1 className='text-blue-500 mb-0 font-bold flex items-center'>Red Onion</h1>
                             </a>
                         </div>

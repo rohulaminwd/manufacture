@@ -5,7 +5,7 @@ const Banner = () => {
     return (
         <div class="hero mt-16 lg:py-16 bg-cyan-100 lg:w-full">
             <div class="hero-content mx-4 md:mx-8 lg:mx-16 flex-col lg:flex-row-reverse">
-                <div className="" data-aos="zoom-in-up" data-aos-delay="100" data-aos-duration="1000">
+                <div className="">
                  <img src={banner} class=" md:max-w-md " />
                 </div>
                 <div className=''>

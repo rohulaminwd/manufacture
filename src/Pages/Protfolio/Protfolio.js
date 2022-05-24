@@ -65,7 +65,7 @@ const Protfolio = () => {
                             <a href="https://gymnasium-99909.firebaseapp.com/" className='border p-3 border-x-8 border-blue-200 rounded-full'>
                                 <h1 className='text-blue-500 mb-0 font-bold flex items-center'><SiPolymerproject width={24} />Gymnasium</h1>
                             </a>
-                            <a href="https://grocery-stock-90a1c.web.app/" className='border p-3 border-x-8 border-blue-200 rounded-full'>
+                            <a href="https://red-onion-ff595.web.app" className='border p-3 border-x-8 border-blue-200 rounded-full'>
                                 <h1 className='text-blue-500 mb-0 font-bold flex items-center'><SiPolymerproject width={24} />  Red Onion</h1>
                             </a>
                         </div>

@@ -33,7 +33,7 @@ const BusnessSummery = () => {
             <h1 className='text-center text-primary uppercase md:text-2xl my-5' data-aos="zoom-in-up" data-aos-delay="300" data-aos-duration="800">try to understands user expectation</h1>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {
-                    summery.map(items => <div className="text-center border rounded-xl mt-5 p-3" data-aos="zoom-in-right" data-aos-delay="100" data-aos-duration="800">
+                    summery.map(items => <div className="text-center border hover:border-blue-900 transition rounded-xl mt-5 p-3" data-aos="zoom-in-right" data-aos-delay="100" data-aos-duration="800">
                         <div className="w-[80px] mx-auto">
                             <img src={items.img} className='w-full' alt="" />
                         </div>

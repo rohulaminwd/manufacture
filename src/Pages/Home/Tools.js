@@ -20,7 +20,7 @@ const Tools = () => {
     return (
         <div className='my-10'>
         <h1 className='text-center font-bold text-primary uppercase text-2xl md:text-4xl my-8'>Our best product</h1>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
             {
                 product?.slice(0, 6).map(tool => <ToolsCard
                     key={tool._id}

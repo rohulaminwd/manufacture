@@ -66,7 +66,8 @@ const Parches = () => {
 
     return (
         <div className='mt-20 mx-4 md:mx-8 lg:mx-16'>
-            <div class="grid lg:w-[80%] mx-auto grid-cols-1 md:grid-cols-2 gap-4 justify-center items-center py-4">
+            <h1 className='text-2xl lg:text-4xl my-5 font-bold text-center text-primary'>{name}</h1>
+            <div class="grid lg:w-[80%] mx-auto sm:shadow-xl sm:border rounded-xl border-blue-200 md:border-x-8 grid-cols-1 md:grid-cols-2 gap-4 justify-center items-center py-4">
                 <div class="p-4" data-aos="zoom-in-right" data-aos-delay="100" data-aos-duration="800">
                     <h2 class="text-2xl text-primary font-bold">{name}</h2>
                     <p className='text-md'>{description}</p>
@@ -77,12 +78,12 @@ const Parches = () => {
                     <div className="">
                         <p className='font-bold '>Minimun Order Quantity: <span className='text-xl text-primary'>{minQuantity}</span></p>
                     </div>
-                    <div className="md:flex mt-4 pt-3 border-t-2 justify-between items-center">
+                    <div className="md:flex mt-4 pt-3 border-blue-900 border-t-2 justify-between items-center">
                         <div className="">
                             <h1 className='text-xl font-bold'>Order Quantity : <span className='text-primary'>{quantity}</span> </h1>
-                            <h1 className='text-xl font-bold'>Total Price : <span className='text-accent'>${totalPrice}</span> </h1>
+                            <h1 className='text-xl my-3 font-bold'>Total Price : <span className='text-accent'>${totalPrice}</span> </h1>
                         </div>
-                        <div className="flex ml-4 justify-center items-center shadow-sm border-blue-900 border-x-4 rounded-3xl border py-2">
+                        <div className="flex md:ml-4 w-32 justify-center items-center shadow-sm border-blue-900 border-x-4 rounded-3xl border py-2">
                             <span onClick={() => handleQuantity(false)} className='pl-4 font-bold cursor-pointer text-xl'>-</span>
                             <span className='px-4 font-bold text-primary text-xl'>{quantity}</span>
                             <span onClick={() => handleQuantity(true)} className='pr-4 cursor-pointer font-bold text-xl'>+</span>

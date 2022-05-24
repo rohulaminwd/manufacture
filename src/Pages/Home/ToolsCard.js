@@ -5,8 +5,8 @@ const ToolsCard = ({tool, refetch}) => {
     const {img, _id, name, description, max_quantity, min_quantity, price} = tool;
     return (
         <div data-aos="zoom-in-up" data-aos-delay="100" data-aos-duration="800">
-            <div class="card p-3 bg-base-100 border h-full border-blue-200 hover:shadow-md hover:translate-y-[-5px] transition">
-                <div className="flex border-blue-300 border-b">
+            <div class="card p-3 bg-base-100 border h-full border-blue-300 hover:border-blue-900 hover:shadow-md hover:translate-y-[-5px] transition">
+                <div className="flex border-blue-300 hover:border-blue-900 border-b">
                     <figure class="w-[40%]">
                         <img src={img} alt="Shoes" class="rounded-xl" />
                     </figure>

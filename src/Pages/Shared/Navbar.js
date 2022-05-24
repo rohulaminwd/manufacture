@@ -23,18 +23,24 @@ const Navbar = () => {
               <div class="dropdown p-0 dropdown-end">
                     <label tabindex="0" class="btn btn-ghost btn-circle avatar">
                         <div class="w-10 rounded-full">
-                        <img src="https://api.lorem.space/image/face?hash=33791" />
+                        { user?.photoURL? <img src={user.photoURL} alt='profile' /> : <img src="https://api.lorem.space/image/face?hash=33791" alt='profile' />}
                         </div>
                     </label>
-                    <ul tabindex="0" class="p-2 shadow top-[60px] menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                    <ul tabindex="0" class="p-2 shadow-md border border-blue-200 top-[60px] menu menu-compact dropdown-content bg-base-100 rounded-box w-48">
+                        <div className="text-center border-b-2 border-blue-200 mb-3">
+                            <div class="avatar online">
+                                <div class="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                                { user?.photoURL? <img src={user.photoURL} alt='profile' /> : <img src="https://api.lorem.space/image/face?hash=33791" alt='profile' />}
+                                </div>
+                            </div>
+                            <h1 className='mb-2 text-blue-900'>{user.displayName}</h1>
+                        </div>
                         <li>
-                        <a class="justify-between">
-                            Profile
-                            <span class="badge">New</span>
-                        </a>
+                            <NavLink to='/dashboard/'>Profile</NavLink>
                         </li>
+                        <li><a>Update Profile</a></li>
                         <li><a>Settings</a></li>
-                        <li><a>Logout</a></li>
+                        <li onClick={logOut}><a>Sign Out</a></li>
                     </ul>
                 </div>
               :

@@ -3,30 +3,29 @@ import logo from '../../assets/images/logo.png'
 
 const Footer = () => {
     return (
-        <div className='bg-base-100 text-base-content'>
+        <div className='bg-cyan-100 text-base-content'>
             <div className='flex justify-center'>
                 <img src={logo} className='mt-4' alt="" />
             </div>
             <footer className="footer p-10 px-4 lg:px-16">
-                <div className='rounded-md shadow-md w-full p-4'>
-                    <span className="footer-title">Services</span> 
+                <div className='rounded-xl shadow-md w-full border text-blue-900 border-blue-900 border-x-8 p-4'>
+                    <span className="text-xl font-bold">Services</span> 
                     <a className="link link-hover">Branding</a>
                     <a className="link link-hover">Design</a>
                     <a className="link link-hover">Marketing</a>
                     <a className="link link-hover">Advertisement</a>
                 </div> 
-                <div className='rounded-md shadow-md w-full p-4'>
-                    <span className="footer-title">Company</span> 
+                <div className='rounded-xl shadow-md w-full border text-blue-900 border-blue-900 border-x-8 p-4'>
+                    <span className="text-xl font-bold">Company</span> 
                     <a className="link link-hover">About us</a>
                     <a className="link link-hover">Contact</a>
                     <a className="link link-hover">Jobs</a>
                     <a className="link link-hover">Press kit</a>
-                </div> 
-                <div className='rounded-md shadow-md w-full p-4 h-full'>
-                    <span className="footer-title">Legal</span> 
-                    <a className="link link-hover">Terms of use</a>
-                    <a className="link link-hover">Privacy policy</a>
-                    <a className="link link-hover">Cookie policy</a>
+                </div>
+                <div className='rounded-xl shadow-md w-full border text-blue-900 border-blue-900 border-x-8 p-4'>
+                    <span className="text-xl font-bold">Quick Contact</span>
+                    <input type="text" placeholder="Email" class="input text-blue-900 input-bordered border-blue-900 input-blue-900 w-full" />
+                    <button className='btn btn-blue-900 text-white'>submit</button>
                 </div>
             </footer>
             

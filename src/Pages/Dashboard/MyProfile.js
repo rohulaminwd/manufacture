@@ -2,6 +2,7 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import {AiFillPhone} from  'react-icons/ai'
+import profile from '../../assets/images/rohul.png'
 
 const MyProfile = () => {
     const [user] = useAuthState(auth)
@@ -11,7 +12,7 @@ const MyProfile = () => {
             <div class="card w-[100%] mt-16 mx-auto lg:w-[500px] bg-base-100 border-8 border border-blue-200 rounded-2xl shadow-xl">
                 <div className="avatar mt-5">
                     <div class="w-28 mx-auto rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                        <img src={user.photoURL} />
+                        { user.photoURL? <img src={user.photoURL} alt='Profile pic' /> : <img src={profile} alt='Profile pickter' />}
                     </div>
                 </div>
                 <div class="card-body items-center text-center">

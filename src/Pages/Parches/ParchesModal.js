@@ -18,7 +18,7 @@ const ParchesModal = ({order, setOrder}) => {
         }
         console.log(product)
         // send data backend
-        fetch('http://localhost:5000/order', {
+        fetch('https://arcane-journey-12889.herokuapp.com/order', {
             method: "POST",
             headers: {
                 'content-type': 'application/json',

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ToolsCard = ({tool}) => {
+const ToolsCard = ({tool, refetch}) => {
     const {img, _id, name, description, max_quantity, min_quantity, price} = tool;
     return (
         <div>

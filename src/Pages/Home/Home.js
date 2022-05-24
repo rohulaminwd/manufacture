@@ -10,8 +10,8 @@ import Tools from './Tools';
 const Home = () => {
     return (
         <>
+        <Banner></Banner>
         <div className='mx-4 md:mx-8 lg:mx-16'>
-            <Banner></Banner>
             <Tools></Tools>
             <Review />
             <BusnessSummery />

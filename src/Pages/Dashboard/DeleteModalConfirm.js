@@ -5,7 +5,7 @@ const DeleteModalConfirm = ({deletingModal, method, refetch, setDeletingModal}) 
     const {name, _id} = deletingModal;
     console.log(method)
     const handleDelete = () => {
-        fetch(`http://localhost:5000/${method}/${_id}`, {
+        fetch(`https://arcane-journey-12889.herokuapp.com/${method}/${_id}`, {
             method: 'DELETE',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`

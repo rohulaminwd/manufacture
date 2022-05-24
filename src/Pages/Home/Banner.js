@@ -1,16 +1,17 @@
 import React from 'react';
-import banner from '../../assets/images/tools-banner (3).jpg'
+import banner from '../../assets/images/banner.png'
 
 const Banner = () => {
     return (
-        <div class="hero mt-16">
-            <div class="hero-content flex-col lg:flex-row-reverse">
+        <div class="hero mt-16 lg:py-16 bg-cyan-100 lg:w-full">
+            <div class="hero-content mx-4 md:mx-8 lg:mx-16 flex-col lg:flex-row-reverse">
                 <div className="">
-                 <img src={banner} class="max-w-md" />
+                 <img src={banner} class=" md:max-w-md " />
                 </div>
                 <div className=''>
-                <h1 class="text-5xl font-bold">Box Office News!</h1>
-                <p class="py-6 w-3/4">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                <h1 class="text-2xl text-cyan-500 uppercase font-bold">POWERFUL AUTO PARTS</h1>
+                <h1 class="text-5xl text-primary font-bold"><span className='text-accent'>Aments</span> Market!</h1>
+                <p class="py-6 w-3/4">Keep Your Vehicle in Great Condition with Top Auto Parts, Engineered for your best workout yet, Select YOur auto parts..</p>
                 <button class="btn btn-primary">Get Started</button>
                 </div>
             </div>

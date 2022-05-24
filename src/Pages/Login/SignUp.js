@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 import Loading from '../Shared/Loading';
 import useToken from '../../Hooks/useToken';
 import { Link, useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
 
 const SignUp = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -18,7 +17,7 @@ const SignUp = () => {
       ] = useCreateUserWithEmailAndPassword(auth);
 
     const [token] = useToken(user || gUser);
-    const navigate = useNavigate  
+    const navigate = useNavigate()  
     let signInError;  
 
     if(loading || gLoading || updating){
@@ -30,7 +29,7 @@ const SignUp = () => {
     }
 
     if(token){
-        navigate('/appointment')
+        navigate('/')
     }
     
 

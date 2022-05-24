@@ -10,7 +10,7 @@ const MyOrders = () => {
     const [user, loading] = useAuthState(auth)
     const [deletingModal, setDeletingModal] = useState(null)
     const email = user.email
-    const {data: orders, isLoading, refetch} = useQuery('product', () => fetch(`http://localhost:5000/myOrder?email=${email}`, {
+    const {data: orders, isLoading, refetch} = useQuery('product', () => fetch(`https://arcane-journey-12889.herokuapp.com/myOrder?email=${email}`, {
         headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`
         }
@@ -21,7 +21,8 @@ const MyOrders = () => {
     const method = 'myOrder'   
     return (
         <div>
-            <h1 className='text-2xl text-center text-secondary font-bold'>My orders: {orders.length}</h1>
+            { (orders.length !== 0) && <h1 className='text-2xl my-8 text-center text-Primary font-bold'>My orders: {orders.length}</h1>}
+            { (orders.length === 0) && <h1 className='text-2xl my-8 text-center text-accent font-bold'>Not Found Yor order.! Pleace Order Now</h1>}
             <div class="overflow-x-auto w-full">
                 <table class="table w-full">
                     <thead>

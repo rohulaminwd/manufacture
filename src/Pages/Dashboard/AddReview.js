@@ -22,7 +22,7 @@ const AddReview = () => {
         }
         console.log(review)
         // send data backend
-        fetch('http://localhost:5000/review', {
+        fetch('https://arcane-journey-12889.herokuapp.com/review', {
             method: "POST",
             headers: {
                 'content-type': 'application/json',

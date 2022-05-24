@@ -2,6 +2,7 @@ import React from 'react';
 import rohul from '../../assets/images/rohul.png'
 import {SiPolymerproject} from 'react-icons/si'
 import {AiFillPhone} from 'react-icons/ai'
+import {MdEmail} from 'react-icons/md'
 
 const Protfolio = () => {
     return (
@@ -58,12 +59,12 @@ const Protfolio = () => {
                             <h1 className='text-blue-500 mb-0 font-bold'>Polasi kura Jonota High School</h1>
                         </div>
                         <h1 className='text-primary mb-5 font-bold text-2xl'>My best Project</h1>
-                        <div className="grid grid-cols-3 gap-2">
+                        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-2">
                             <a href="https://grocery-stock-90a1c.web.app/" className='border p-3 border-x-8 border-blue-200 rounded-full'>
-                                <h1 className='text-blue-500 mb-0 font-bold flex items-center'><SiPolymerproject width={24} />  Red Onion</h1>
+                                <h1 className='text-blue-500 mb-0 font-bold flex items-center'><SiPolymerproject width={24} />Grosari stock</h1>
                             </a>
-                            <a href="https://grocery-stock-90a1c.web.app/" className='border p-3 border-x-8 border-blue-200 rounded-full'>
-                                <h1 className='text-blue-500 mb-0 font-bold flex items-center'><SiPolymerproject width={24} />  Red Onion</h1>
+                            <a href="https://gymnasium-99909.firebaseapp.com/" className='border p-3 border-x-8 border-blue-200 rounded-full'>
+                                <h1 className='text-blue-500 mb-0 font-bold flex items-center'><SiPolymerproject width={24} />Gymnasium</h1>
                             </a>
                             <a href="https://grocery-stock-90a1c.web.app/" className='border p-3 border-x-8 border-blue-200 rounded-full'>
                                 <h1 className='text-blue-500 mb-0 font-bold flex items-center'><SiPolymerproject width={24} />  Red Onion</h1>
@@ -71,9 +72,7 @@ const Protfolio = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <h1 className='text-3xl uppercase font-bold text-center underline underline-offset-4 text-blue-500 my-10'>contact Information</h1>
-            <div className="border p-3 border-x-8 my-10 border-blue-200 rounded-2xl shadow-xl">
+                <div className="border p-3 border-x-8 my-10 border-blue-200 rounded-2xl shadow-xl">
                     <h1 className='text-primary mb-5 font-bold text-2xl'>Contact Information</h1>
                     <div className="grid gap-2">
                         <div className="">
@@ -87,20 +86,24 @@ const Protfolio = () => {
                                 <a href="tel:+0183194559" ><button className='btn btn-primary font-bold btn-sm'><AiFillPhone /> +0183194559 </button></a>
                             </div>
                         </div>
-                        <h1 className='text-primary mb-5 font-bold text-2xl'>My best Project</h1>
-                        <div className="grid grid-cols-3 gap-2">
-                            <a href="https://grocery-stock-90a1c.web.app/" className='border p-3 border-x-8 border-blue-200 rounded-full'>
-                                <h1 className='text-blue-500 mb-0 font-bold flex items-center'><SiPolymerproject width={24} />  Red Onion</h1>
-                            </a>
-                            <a href="https://grocery-stock-90a1c.web.app/" className='border p-3 border-x-8 border-blue-200 rounded-full'>
-                                <h1 className='text-blue-500 mb-0 font-bold flex items-center'><SiPolymerproject width={24} />  Red Onion</h1>
-                            </a>
-                            <a href="https://grocery-stock-90a1c.web.app/" className='border p-3 border-x-8 border-blue-200 rounded-full'>
-                                <h1 className='text-blue-500 mb-0 font-bold flex items-center'><SiPolymerproject width={24} />  Red Onion</h1>
-                            </a>
+                        <div className="">
+                            <h1 className='text-secondary text-xl mb-0 font-bold'>Email</h1>
+                            <div class="card-actions mt-3">
+                                <a href="mailto: rohulaminwd@gmail.com"><span className='text-primary text-xl'>rohulaminwd@gmail.com </span></a>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div className="border p-3 border-x-8 my-10 border-blue-200 rounded-2xl shadow-xl">
+                    <h1 className='text-primary mb-5 font-bold text-2xl'>Project Information</h1>
+                    <p className='text-blue-500'>1. This project use react js, node js, Express, HTML, CSS, main code</p>
+                    <p className='text-blue-500'>2. Project main 4 page home, portfolio, blog, dashboard</p>
+                    <p className='text-blue-500'>3. Home page 7 section banner, footer, purses, review, buisness, brand, some purses section 1 button clik the purses page</p>
+                    <p className='text-blue-500'>4. Dashboard simple user 3 page seen profile, add review, my Order and admin 5 page seen profile, manage order, manage product, add admin, add product </p>
+                    <p className='text-blue-500'>5. Navbar Notfound page and some animation aos</p>
+                    <p className='text-blue-500'>6. React dependence use react hook, react form, firebase, react icon, react payment system added</p>
+                </div>
+            </div>
         </div>
     );
 };

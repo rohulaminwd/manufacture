@@ -24,6 +24,56 @@ const MyProfile = () => {
                     </div>
                 </div>
             </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-10">
+                <div className="border p-3 border-x-8 my-10 border-blue-200 rounded-2xl shadow-xl">
+                    <h1 className='text-primary mb-5 font-bold text-2xl'>Contact Information</h1>
+                    <div className="grid gap-2">
+                        <div className="">
+                            <h1 className='text-secondary text-xl mb-0 font-bold'>Address</h1>
+                            <h1 className='text-blue-500 mb-0 font-bold'>Batkuchi, Nonni, Nalitabari, Serpur.</h1>
+                        </div>
+                        <div className="">
+                            <h1 className='text-secondary text-xl mb-0 font-bold'>Phone Number</h1>
+                            <div class="card-actions mt-3">
+                                <a href="tel:+0183194559" ><button className='btn btn-primary font-bold btn-sm'><AiFillPhone /> +0183194559 </button></a>
+                                <a href="tel:+0183194559" ><button className='btn btn-primary font-bold btn-sm'><AiFillPhone /> +0183194559 </button></a>
+                            </div>
+                        </div>
+                        <div className="">
+                            <h1 className='text-secondary text-xl mb-0 font-bold'>Email</h1>
+                            <div class="card-actions mt-3">
+                                <a href="mailto: rohulaminwd@gmail.com"><span className='text-primary text-xl'>rohulaminwd@gmail.com </span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div className="border p-3 border-x-8 my-10 border-blue-200 rounded-2xl shadow-xl">
+                    <h1 className='text-primary mb-5 font-bold text-2xl'>Educational Skills</h1>
+                    <div className="grid gap-2">
+                        <div className="">
+                            <h1 className='text-secondary text-xl mb-0 font-bold'>HSC - 2020</h1>
+                            <h1 className='text-blue-500 mb-0 font-bold'>Haji Nurul Haqua Nonni Puragong Moitri Collage</h1>
+                        </div>
+                        <div className="">
+                            <h1 className='text-secondary text-xl mb-0 font-bold'>SSC - 2018</h1>
+                            <h1 className='text-blue-500 mb-0 font-bold'>Polasi kura Jonota High School</h1>
+                        </div>
+                        <h1 className='text-primary mb-5 font-bold text-2xl'>My best Project</h1>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-2">
+                            <a href="https://grocery-stock-90a1c.web.app/" className='border p-3 border-x-8 border-blue-200 rounded-full'>
+                                <h1 className='text-blue-500 mb-0 font-bold flex items-center'>Grosari stock</h1>
+                            </a>
+                            <a href="https://gymnasium-99909.firebaseapp.com/" className='border p-3 border-x-8 border-blue-200 rounded-full'>
+                                <h1 className='text-blue-500 mb-0 font-bold flex items-center'>Gymnasium</h1>
+                            </a>
+                            <a href="https://grocery-stock-90a1c.web.app/" className='border p-3 border-x-8 border-blue-200 rounded-full'>
+                                <h1 className='text-blue-500 mb-0 font-bold flex items-center'>Red Onion</h1>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };

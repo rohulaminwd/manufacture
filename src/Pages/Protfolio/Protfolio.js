@@ -2,7 +2,6 @@ import React from 'react';
 import rohul from '../../assets/images/rohul.png'
 import {SiPolymerproject} from 'react-icons/si'
 import {AiFillPhone} from 'react-icons/ai'
-import {MdEmail} from 'react-icons/md'
 
 const Protfolio = () => {
     return (

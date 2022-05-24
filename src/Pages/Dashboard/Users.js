@@ -4,7 +4,7 @@ import Loading from '../Shared/Loading';
 import UsersRow from './UsersRow';
 
 const Users = () => {
-    const {data: users, isLoading, refetch} = useQuery('users', () => fetch('https://arcane-journey-12889.herokuapp.com/user', {
+    const {data: users, isLoading, refetch} = useQuery('user', () => fetch('https://arcane-journey-12889.herokuapp.com/user', {
         method: 'GET',
         headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -14,7 +14,6 @@ const Users = () => {
     if(isLoading){
         return <Loading />
     }
-
     return (
         <div>
             <h1 className='text-xl font-bold text-purple-600 mb-3'>All users: {users.length}</h1>

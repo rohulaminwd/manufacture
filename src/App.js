@@ -2,6 +2,8 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import "aos/dist/aos.css";
+import AOS from "aos";
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import SignUp from './Pages/Login/SignUp';
@@ -19,9 +21,11 @@ import ManageProduct from './Pages/Dashboard/ManageProduct';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import Blog from './Pages/Blog/Blog';
 import Protfolio from './Pages/Protfolio/Protfolio';
+import Notfound from './Pages/Shared/Notfound';
 
 
 function App() {
+  AOS.init();
   return (
     <div className='max-w-7xl mx-auto'>
       <Navbar></Navbar>
@@ -47,6 +51,7 @@ function App() {
           <Route path='manageOrder' element={<RequireAdmin><ManageOrder /></RequireAdmin>}></Route>
           <Route path='manageProduct' element={<RequireAdmin><ManageProduct /></RequireAdmin>}></Route>
         </Route>
+        <Route path='*' element={<Notfound />}></Route>
       </Routes>
       <ToastContainer />
     </div>

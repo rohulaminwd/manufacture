@@ -9,7 +9,7 @@ const MyProfile = () => {
     return (
         <div>
             <h1 className='text-2xl font-bold text-primary text-center'>My Profile</h1>
-            <div class="card w-[100%] mt-16 mx-auto lg:w-[500px] bg-base-100 border-8 border border-blue-200 rounded-2xl shadow-xl">
+            <div class="card w-[100%] mt-16 mx-auto lg:w-[500px] bg-base-100 border-8 border border-blue-200 rounded-2xl shadow-xl" data-aos="zoom-in-up" data-aos-delay="100" data-aos-duration="800">
                 <div className="avatar mt-5">
                     <div class="w-28 mx-auto rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                         { user.photoURL? <img src={user.photoURL} alt='Profile pic' /> : <img src={profile} alt='Profile pickter' />}
@@ -26,7 +26,7 @@ const MyProfile = () => {
                 </div>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-10">
-                <div className="border p-3 border-x-8 my-10 border-blue-200 rounded-2xl shadow-xl">
+                <div className="border p-3 border-x-8 my-10 border-blue-200 rounded-2xl shadow-xl" data-aos="zoom-in-right" data-aos-delay="300" data-aos-duration="800">
                     <h1 className='text-primary mb-5 font-bold text-2xl'>Contact Information</h1>
                     <div className="grid gap-2">
                         <div className="">
@@ -49,7 +49,7 @@ const MyProfile = () => {
                     </div>
                 </div>
                 
-                <div className="border p-3 border-x-8 my-10 border-blue-200 rounded-2xl shadow-xl">
+                <div className="border p-3 border-x-8 my-10 border-blue-200 rounded-2xl shadow-xl" data-aos="zoom-in-left" data-aos-delay="500" data-aos-duration="800">
                     <h1 className='text-primary mb-5 font-bold text-2xl'>Educational Skills</h1>
                     <div className="grid gap-2">
                         <div className="">

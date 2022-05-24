@@ -5,7 +5,7 @@ import {AiFillPhone} from 'react-icons/ai'
 
 const Protfolio = () => {
     return (
-        <div className='mt-20 mx-4 md:mx-8 lg:mx-16'>
+        <div className='mt-20 mx-4 md:mx-8 lg:mx-16' data-aos="zoom-in-up" data-aos-delay="100" data-aos-duration="800">
             <h1 className='text-3xl uppercase font-bold text-center text-cyan-500 my-8'>My Portfolio</h1>
             <div className="border text-center md:w-[500px] mx-auto p-5 border-x-8 border-cyan-200 rounded-2xl shadow-xl">
                 <div class="avatar">
@@ -21,7 +21,7 @@ const Protfolio = () => {
             </div>
             <h1 className='text-3xl uppercase font-bold text-center underline underline-offset-4 text-blue-500 my-10'>Others Information</h1>
             <div className="grid md:grid-cols-1 mt-10 lg:grid-cols-2 gap-5">
-                <div className="border p-3 border-x-8 border-blue-200 rounded-2xl shadow-xl">
+                <div className="border p-3 border-x-8 border-blue-200 rounded-2xl shadow-xl" data-aos="zoom-in-right" data-aos-delay="200" data-aos-duration="800">
                     <h1 className='text-primary mb-5 font-bold text-2xl'>Coding Skills</h1>
                     <div className="grid gap-2">
                         <div className="">
@@ -46,7 +46,7 @@ const Protfolio = () => {
                         </div>
                     </div>
                 </div>
-                <div className="border p-3 border-x-8 border-blue-200 rounded-2xl shadow-xl">
+                <div className="border p-3 border-x-8 border-blue-200 rounded-2xl shadow-xl" data-aos="zoom-in-left" data-aos-delay="400" data-aos-duration="800">
                     <h1 className='text-primary mb-5 font-bold text-2xl'>Educational Skills</h1>
                     <div className="grid gap-2">
                         <div className="">
@@ -71,7 +71,7 @@ const Protfolio = () => {
                         </div>
                     </div>
                 </div>
-                <div className="border p-3 border-x-8 my-10 border-blue-200 rounded-2xl shadow-xl">
+                <div className="border p-3 border-x-8 my-10 border-blue-200 rounded-2xl shadow-xl" data-aos="zoom-in-right" data-aos-delay="200" data-aos-duration="800">
                     <h1 className='text-primary mb-5 font-bold text-2xl'>Contact Information</h1>
                     <div className="grid gap-2">
                         <div className="">
@@ -93,7 +93,7 @@ const Protfolio = () => {
                         </div>
                     </div>
                 </div>
-                <div className="border p-3 border-x-8 my-10 border-blue-200 rounded-2xl shadow-xl">
+                <div className="border p-3 border-x-8 my-10 border-blue-200 rounded-2xl shadow-xl" data-aos="zoom-in-left" data-aos-delay="200" data-aos-duration="800">
                     <h1 className='text-primary mb-5 font-bold text-2xl'>Project Information</h1>
                     <p className='text-blue-500'>1. This project use react js, node js, Express, HTML, CSS, main code</p>
                     <p className='text-blue-500'>2. Project main 4 page home, portfolio, blog, dashboard</p>

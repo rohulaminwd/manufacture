@@ -67,7 +67,7 @@ const Parches = () => {
     return (
         <div className='mt-20 mx-4 md:mx-8 lg:mx-16'>
             <div class="grid lg:w-[80%] mx-auto grid-cols-1 md:grid-cols-2 gap-4 justify-center items-center py-4">
-                <div class="p-4">
+                <div class="p-4" data-aos="zoom-in-right" data-aos-delay="100" data-aos-duration="800">
                     <h2 class="text-2xl text-primary font-bold">{name}</h2>
                     <p className='text-md'>{description}</p>
                     <h1 className='text-2xl text-primary'>Price: <span className='text-accent font-bold'>${price}</span></h1>
@@ -90,7 +90,7 @@ const Parches = () => {
                     </div>
                     <label for="order-modal" class="btn modal-button mt-5 mx-auto">Order now</label>
                 </div>
-                <div className='h-full w-full mx-auto'>
+                <div className='h-full w-full mx-auto' data-aos="zoom-in-left" data-aos-delay="300" data-aos-duration="800">
                     <img src={img} className='w-full' alt="Movie"  />
                 </div>
             </div>

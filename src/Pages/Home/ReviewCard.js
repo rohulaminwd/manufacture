@@ -4,7 +4,7 @@ import {BsStarFill} from 'react-icons/bs'
 const ReviewCard = ({review}) => {
     const {name, description, rating, } = review;
     return (
-        <div>
+        <div data-aos="zoom-in-down" data-aos-delay="100" data-aos-duration="800">
             <div class="card bg-base-100 text-center border hover:shadow-md hover:translate-y-[-5px] transition border-blue-200">
             <div class="card-body">
                 <h2 class="text-xl font-bold">{name}</h2>

@@ -12,7 +12,7 @@ const Dashboard = () => {
         <div class="drawer mt-16 drawer-mobile">
             <input id="dashboard-sidebar" type="checkbox" class="drawer-toggle" />
             <div class="drawer-content mx-4">
-                <h2 className='text-3xl font-bold text-center text-secondary mt-5'>My Dashboard</h2>
+                <h2 className=' text-xl md:text-3xl font-bold text-center text-secondary mt-5' data-aos="zoom-in-up" data-aos-delay="100" data-aos-duration="800">My Dashboard</h2>
                 <Outlet />
             </div> 
             <div class="drawer-side border-r-2  border-blue-300">

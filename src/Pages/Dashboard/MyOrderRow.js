@@ -25,11 +25,13 @@ const DoctorRow = ({product, index, setDeletingModal}) => {
             </td>
             <td>
                 <div className="">
-                    <Link to={`/dashboard/myOrder/payment/${_id}`} className='btn btn-xs btn-secondary text-white'>Pay Now</Link>
+                    {!product?.paid && <Link to={`/dashboard/myOrder/payment/${_id}`} className='btn btn-xs btn-secondary text-white'>Pay</Link>}
+                    {product?.paid && <button className='btn btn-xs btn-success text-white'>Paid</button>}
+                    {product?.transactionId && <p className='mt-3 text-primary'>{product?.transactionId}</p>}
                 </div>
             </td>
             <th>
-                <label onClick={() => setDeletingModal(product)} for="delete-confirm-modal" class="btn btn-accent text-white btn-xs">delete</label>
+                <label onClick={() => setDeletingModal(product)} for="delete-confirm-modal" class="btn btn-accent text-white btn-xs" disabled={product.paid}>delete</label>
             </th>
         </tr>
     );

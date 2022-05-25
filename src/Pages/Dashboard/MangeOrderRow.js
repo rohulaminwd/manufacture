@@ -1,16 +1,29 @@
 import React, { useEffect, useState } from 'react';
 
 const DoctorRow = ({product, index, setDeletingModal}) => {
-    const {name, price, email, img, quantity, productName,} = product;
+    const {_id, name, price, email, img, quantity, productName,} = product;
 
     useEffect(() => {
-        setStatus('pending')
+        setStatus(product?.status)
     }, [product]);
 
     const [status, setStatus] = useState('');
 
     const handlePay = status => {
         setStatus(status)
+
+        fetch(`http://localhost:5000/order/${_id}`, {
+            method: 'PUT',
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data.modifiedCount > 0){
+                setStatus(status)
+            }
+        })
     }
     return (
         <tr>
@@ -37,8 +50,10 @@ const DoctorRow = ({product, index, setDeletingModal}) => {
                 </div>
             </td>
             <th>
-                {  (status === 'pending') && <label onClick={() => handlePay('shipt')}  class="btn btn-secondary text-white btn-xs">{status}</label>}
+                {  (status === 'pending') && <label onClick={() => handlePay('shipt')}  class="btn btn-accent text-white btn-xs">{status}...</label>}
                 {  (status === 'shipt') && <label class="btn btn-success text-white btn-xs">{status}</label> }
+                {  (product.paid === true) && <p class="text-blue-900 mt-3">{product?.transactionId}</p>}
+                {  (!product.status) && <label class="btn btn-secondary text-white btn-xs">Un Paid</label> }
             </th>
         </tr>
     );

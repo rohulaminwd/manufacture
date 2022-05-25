@@ -4,7 +4,7 @@ import Loading from '../Shared/Loading';
 import ReviewCard from './ReviewCard';
 
 const Review = () => {
-    const {data: reviews, isLoading} = useQuery('review', () => fetch('https://arcane-journey-12889.herokuapp.com/review', {
+    const {data: reviews, isLoading} = useQuery('review', () => fetch('http://localhost:5000/review', {
         headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`
         }
@@ -12,11 +12,6 @@ const Review = () => {
     if(isLoading){
         return <Loading />
     }
-    // let arr = [];
-    // for(let i = 0; i < reviews.length - 1; i++){
-    //     const element = reviews[i];
-    //     arr = arr.push(element)
-    // }
     return (
         <div className='my-10'>
             <h1 className='text-4xl font-bold text-center my-8'>See What Our Customers Say About Us</h1>

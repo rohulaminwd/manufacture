@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const DoctorRow = ({product, index, setDeletingModal}) => {
+const MyOrderRow = ({product, index, setDeletingModal}) => {
     const {_id, price, img, quantity, productName,} = product;
 
 
@@ -37,4 +37,4 @@ const DoctorRow = ({product, index, setDeletingModal}) => {
     );
 };
 
-export default DoctorRow;
+export default MyOrderRow;

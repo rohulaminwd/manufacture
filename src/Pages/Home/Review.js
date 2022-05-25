@@ -4,7 +4,7 @@ import Loading from '../Shared/Loading';
 import ReviewCard from './ReviewCard';
 
 const Review = () => {
-    const {data: reviews, isLoading} = useQuery('review', () => fetch('http://localhost:5000/review', {
+    const {data: reviews, isLoading} = useQuery('review', () => fetch('https://arcane-journey-12889.herokuapp.com/review', {
         headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`
         }

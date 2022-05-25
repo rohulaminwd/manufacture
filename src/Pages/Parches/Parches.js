@@ -11,13 +11,13 @@ const Parches = () => {
     const {id} = useParams()
     const [user, loading] = useAuthState(auth);
     console.log(id)
-    const {data: product, isLoading, refetch} = useQuery('product', () => fetch(`https://arcane-journey-12889.herokuapp.com/product/${id}`, {
+    const {data: product, isLoading, refetch} = useQuery(['product', id], () => fetch(`https://arcane-journey-12889.herokuapp.com/product/${id}`, {
         headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`
         }
     }).then(res => res.json()))
 
-    const {img, name, description, max_quantity, min_quantity, price} = product;
+    // const {img, name, description, max_quantity, min_quantity, price} = product;
     refetch()
     const minQuantity = parseInt(product?.min_quantity)
     const maxQuantity = parseInt(product?.max_quantity)
@@ -35,29 +35,29 @@ const Parches = () => {
 
     const handleQuantity = (condition) => {
         if(condition === true){
-            if(quantity >= max_quantity){
+            if(quantity >= product.max_quantity){
                 return setQuantity(maxQuantity), toast.warn(`Maximum Order Quantity: ${maxQuantity}`)
             }
             setQuantity(quantity + 1)
         }
         if(condition === false){
-            if(quantity <= min_quantity){
+            if(quantity <= product.min_quantity){
                 return setQuantity(minQuantity), toast.warn(`Minimum Order Quantity: ${minQuantity}`);
             }
             setQuantity(quantity - 1)
         }
     }
 
-    const totalPrice = quantity * parseInt(price)
+    const totalPrice = quantity * parseInt(product.price)
 
     
     const order = {
-        productName: name,
+        productName: product.name,
         price: totalPrice,
         quantity: quantity,
         email: user?.email,
         name: user?.displayName,
-        img: img,
+        img: product.img,
 
     }
     
@@ -65,14 +65,14 @@ const Parches = () => {
 
     return (
         <div className='mt-20 mx-4 md:mx-8 lg:mx-16'>
-            <h1 className='text-2xl lg:text-4xl my-5 font-bold text-center text-primary'>{name}</h1>
+            <h1 className='text-2xl lg:text-4xl my-5 font-bold text-center text-primary'>{product.name}</h1>
             <div class="grid lg:w-[80%] mx-auto sm:shadow-xl sm:border rounded-xl border-blue-200 md:border-x-8 grid-cols-1 md:grid-cols-2 gap-4 justify-center items-center py-4">
                 <div class="p-4" data-aos="zoom-in-right" data-aos-delay="100" data-aos-duration="800">
-                    <h2 class="text-2xl text-primary font-bold">{name}</h2>
-                    <p className='text-md'>{description}</p>
-                    <h1 className='text-2xl text-primary'>Price: <span className='text-accent font-bold'>${price}</span></h1>
+                    <h2 class="text-2xl text-primary font-bold">{product.name}</h2>
+                    <p className='text-md'>{product.description}</p>
+                    <h1 className='text-2xl text-primary'>Price: <span className='text-accent font-bold'>${product.price}</span></h1>
                     <div className="">
-                        <p className='font-bold '>Available Quantity: <span className='text-xl text-primary'>{max_quantity}</span></p>
+                        <p className='font-bold '>Available Quantity: <span className='text-xl text-primary'>{product.max_quantity}</span></p>
                     </div>
                     <div className="">
                         <p className='font-bold '>Minimun Order Quantity: <span className='text-xl text-primary'>{minQuantity}</span></p>
@@ -91,7 +91,7 @@ const Parches = () => {
                     <label for="order-modal" class="btn modal-button mt-5 mx-auto">Order now</label>
                 </div>
                 <div className='h-full w-full mx-auto' data-aos="zoom-in-left" data-aos-delay="300" data-aos-duration="800">
-                    <img src={img} className='w-full' alt="Movie"  />
+                    <img src={product.img} className='w-full' alt="Movie"  />
                 </div>
             </div>
             {modalOrder && <ParchesModal setOrder={setOrder} order={order}></ParchesModal>}

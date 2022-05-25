@@ -26,7 +26,7 @@ const MyProfile = () => {
                 </div>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-10">
-                <div className="border p-3 border-x-8 my-10 border-blue-200 rounded-2xl shadow-xl" data-aos="zoom-in-right" data-aos-delay="300" data-aos-duration="800">
+                <div className="border p-3 border-x-8 my-10 border-blue-200 rounded-2xl shadow-xl">
                     <h1 className='text-primary mb-5 font-bold text-2xl'>Contact Information</h1>
                     <div className="grid gap-2">
                         <div className="">
@@ -49,7 +49,7 @@ const MyProfile = () => {
                     </div>
                 </div>
                 
-                <div className="border p-3 border-x-8 my-10 border-blue-200 rounded-2xl shadow-xl" data-aos="zoom-in-left" data-aos-delay="500" data-aos-duration="800">
+                <div className="border p-3 border-x-8 my-10 border-blue-200 rounded-2xl shadow-xl">
                     <h1 className='text-primary mb-5 font-bold text-2xl'>Educational Skills</h1>
                     <div className="grid gap-2">
                         <div className="">

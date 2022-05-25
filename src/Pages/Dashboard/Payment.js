@@ -11,7 +11,7 @@ const stripePromise = loadStripe('pk_test_51L3DuIHQQHfOxtfiNeFDaZOonaXzuLzVOQKnB
 
 const Payment = () => {
     const {id} = useParams()
-    const {data: payProduct, isLoading, refetch} = useQuery(['payProduct', id], () => fetch(`http://localhost:5000/payProduct/${id}`, {
+    const {data: payProduct, isLoading, refetch} = useQuery(['payProduct', id], () => fetch(`https://arcane-journey-12889.herokuapp.com/payProduct/${id}`, {
         headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`
         }
@@ -33,7 +33,7 @@ const Payment = () => {
                     </div>
                 </div>
                 <div className="border border-blue-900 p-5 border-x-8 rounded-xl shadow-xl">
-                    <h1 className='text-cyan-500 text-2xl mb-3 md:text-3xl font-bold'>Order Information</h1>
+                    <h1 className='text-cyan-500 text-2xl mb-3 font-bold'>Order Information</h1>
                     <h1 className='text-xl font-bold text-blue-900'>Pay for: {payProduct.productName}</h1>
                     <h1 className='text-xl font-bold text-blue-900'>Quantity: <span className='text-secondary font-bold'>{payProduct.quantity}</span></h1>
                     <h1 className='text-xl font-bold text-blue-900'>Pay Now: <span className='text-secondary font-bold'>${payProduct.price}</span></h1>

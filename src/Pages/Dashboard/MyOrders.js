@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useQuery } from 'react-query';
 import auth from '../../firebase.init';
@@ -10,7 +10,7 @@ const MyOrders = () => {
     const [user, loading] = useAuthState(auth)
     const [deletingModal, setDeletingModal] = useState(null)
     const email = user.email
-    const {data: orders, isLoading, refetch} = useQuery('product', () => fetch(`https://arcane-journey-12889.herokuapp.com/myOrder?email=${email}`, {
+    const {data: orders, isLoading, refetch} = useQuery(['product', email], () => fetch(`https://arcane-journey-12889.herokuapp.com/myOrder?email=${email}`, {
         headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`
         }

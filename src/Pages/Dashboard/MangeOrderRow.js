@@ -12,7 +12,7 @@ const DoctorRow = ({product, index, setDeletingModal}) => {
     const handlePay = status => {
         setStatus(status)
 
-        fetch(`http://localhost:5000/order/${_id}`, {
+        fetch(`https://arcane-journey-12889.herokuapp.com/order/${_id}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

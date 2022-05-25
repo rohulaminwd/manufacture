@@ -22,14 +22,14 @@ const MyOrders = () => {
     return (
         <div>
             { (orders.length !== 0) && <h1 className='text-2xl my-8 text-center text-Primary font-bold'>My orders: {orders.length}</h1>}
-            { (orders.length === 0) && <h1 className='text-2xl my-8 text-center text-accent font-bold'>Not Found Yor order.! Pleace Order Now</h1>}
+            { (orders.length === 0) && <h1 className='text-2xl my-8 text-center text-accent font-bold'>Not Found Your order.! Pleace Order Now</h1>}
             <div class="overflow-x-auto w-full">
                 <table class="table w-full">
                     <thead>
                     <tr>
                         <th></th>
-                        <th>Name</th>
-                        <th>Price</th>
+                        <th>Product</th>
+                        <th>Payment status</th>
                         <th>Delete</th>
                     </tr>
                     </thead>
@@ -46,10 +46,10 @@ const MyOrders = () => {
                     </tbody>
                     <tfoot>
                         <tr>
-                            <th></th>
-                            <th>Name</th>
-                            <th>Price</th>
-                            <th>Delete</th>
+                        <th></th>
+                        <th>Product</th>
+                        <th>Payment status</th>
+                        <th>Delete</th>
                         </tr>
                     </tfoot>
                     

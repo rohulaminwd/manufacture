@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
@@ -7,18 +7,17 @@ import auth from '../../firebase.init';
 const AddReview = () => {
     const [user] = useAuthState(auth)
     const { register, reset, formState: { errors }, handleSubmit } = useForm();
-    
+    const [star, setStar] = useState([1,1,1,1,1])
+    const ratting = [...star]
     
 
     const onSubmit = async data => {
 
-        const star = data.rating;
-        
         const review = {
             name: user.displayName,
             email: user.email,
             description: data.description,
-            rating: star,
+            starr: ratting,
         }
         console.log(review)
         // send data backend
@@ -82,24 +81,17 @@ const AddReview = () => {
                             {errors.description?.type === 'minLength' && <span className="label-text-alt text-red-500">{errors.description.message}</span>}
                             </label>
                         </div>
-                        <div className="form-control w-full max-w-xs">
-                            <label className="label">
-                                <span className="label-text">Rating</span>
-                            </label>
-                            <input 
-                                type="number" 
-                                placeholder="Rating" 
-                                className="input input-bordered w-full max-w-xs" 
-                                {...register("rating", {
-                                    required: {
-                                    value: true,
-                                    message: 'Name is required'  
-                                    },
-                                })}
-                            />
-                            <label className="label">
-                            {errors.rating?.type === 'required' && <span className="label-text-alt text-red-500">{errors.rating.message}</span>}
-                            </label>
+                        <div className="flex items-center justify-between mb-5">
+                            <div class="rating">
+                                <input type="radio" value='1' onChange={e => setStar(e.target.value)} name="star" class="mask mask-star-2 bg-orange-400"/>
+                                <input type="radio" value='s2' onChange={e => setStar(e.target.value)} name="star" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" value='st3' onChange={e => setStar(e.target.value)} name="star" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" value='sta4' onChange={e => setStar(e.target.value)} name="star" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" value='star4' onChange={e => setStar(e.target.value)} name="star" class="mask mask-star-2 bg-orange-400" />
+                            </div>
+                            <div className="border border-blue-900 border-x-4 py-1  px-2 rounded-2xl  ml-3">
+                                <h1 className='text-primary font-bold'>{ratting.length} stare</h1>
+                            </div>
                         </div>
                         <input className='btn w-full uppercase font-bold max-w-xs' type="submit" value="Add"  />
                     </form>

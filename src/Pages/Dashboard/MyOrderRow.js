@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const DoctorRow = ({product, index, setDeletingModal}) => {
-    const {name, status, price, email, img, quantity, productName,} = product;
+    const {_id, price, img, quantity, productName,} = product;
 
 
     return (
@@ -24,12 +25,11 @@ const DoctorRow = ({product, index, setDeletingModal}) => {
             </td>
             <td>
                 <div className="">
-                    <h1 className=''>{name}</h1>
-                    <h1 className=''>{email}</h1>
+                    <Link to={`/dashboard/myOrder/payment/${_id}`} className='btn btn-xs btn-secondary text-white'>Pay Now</Link>
                 </div>
             </td>
             <th>
-                <label onClick={() => setDeletingModal(product)} for="delete-confirm-modal" class="btn btn-ghost text-red-800 btn-xs">delete</label>
+                <label onClick={() => setDeletingModal(product)} for="delete-confirm-modal" class="btn btn-accent text-white btn-xs">delete</label>
             </th>
         </tr>
     );

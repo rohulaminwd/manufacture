@@ -32,7 +32,6 @@ const Parches = () => {
     if(isLoading || loading){
         return <Loading />
     }
-    
 
     const handleQuantity = (condition) => {
         if(condition === true){

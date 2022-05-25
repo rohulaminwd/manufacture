@@ -22,6 +22,7 @@ import AddProduct from './Pages/Dashboard/AddProduct';
 import Blog from './Pages/Blog/Blog';
 import Protfolio from './Pages/Protfolio/Protfolio';
 import Notfound from './Pages/Shared/Notfound';
+import Payment from './Pages/Dashboard/Payment';
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
         }>
           <Route index element={<MyProfile />}></Route>
           <Route path='myOrder' element={<MyOrders />}></Route>
+          <Route path='myOrder/payment/:id' element={<Payment />}></Route>
           <Route path='addReview' element={<AddReview />}></Route>
           <Route path='users' element={<RequireAdmin> <Users /></RequireAdmin>}></Route>
           <Route path='addProduct' element={<RequireAdmin> <AddProduct /></RequireAdmin>}></Route>

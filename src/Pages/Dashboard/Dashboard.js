@@ -15,7 +15,7 @@ const Dashboard = () => {
                 <h2 className=' text-xl md:text-3xl font-bold text-center text-secondary mt-5' data-aos="zoom-in-up" data-aos-delay="100" data-aos-duration="800">My Dashboard</h2>
                 <Outlet />
             </div> 
-            <div class="drawer-side border-r-2  border-blue-300">
+            <div class="drawer-side border-r-2 z-1 border-blue-300">
                 <label for="dashboard-sidebar" class="drawer-overlay"></label> 
                 <ul class="menu p-4 overflow-y-auto w-48 bg-base-100 text-base-content">
                     {/* <!-- Sidebar content here --> */}

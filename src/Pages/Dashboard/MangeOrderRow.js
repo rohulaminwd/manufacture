@@ -50,10 +50,10 @@ const DoctorRow = ({product, index, setDeletingModal}) => {
                 </div>
             </td>
             <th>
-                {  (status === 'pending') && <label onClick={() => handlePay('shipt')}  class="btn btn-accent text-white btn-xs">{status}...</label>}
+                {  (status === 'pending') && <label onClick={() => handlePay('shipt')}  class="btn btn-secondary text-white btn-xs">{status}...</label>}
                 {  (status === 'shipt') && <label class="btn btn-success text-white btn-xs">{status}</label> }
                 {  (product.paid === true) && <p class="text-blue-900 mt-3">{product?.transactionId}</p>}
-                {  (!product.status) && <label class="btn btn-secondary text-white btn-xs">Un Paid</label> }
+                {  (!product.status) && <label class="btn btn-accent text-white btn-xs">Un Paid</label> }
             </th>
         </tr>
     );

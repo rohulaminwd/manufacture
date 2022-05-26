@@ -29,7 +29,7 @@ const Barand = () => {
     ]
     return (
         <div className='my-10'>
-            <h1 className='text-center text-4xl font-bold my-8'>Our Future Brand</h1>
+            <h1 className='text-center text-2xl md:text-4xl font-bold my-8'>Our Future Brand</h1>
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
                 {
                     brands.map(brand => <div className='border flex justify-center p-5' data-aos="zoom-in-up" data-aos-delay="100" data-aos-duration="800">

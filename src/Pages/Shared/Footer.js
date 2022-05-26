@@ -22,7 +22,7 @@ const Footer = () => {
                     <a className="link link-hover">Jobs</a>
                     <a className="link link-hover">Press kit</a>
                 </div>
-                <div className='rounded-xl shadow-md w-full border text-blue-900 border-blue-900 border-x-8 p-4' data-aos="zoom-in-left" data-aos-delay="500" data-aos-duration="800">
+                <div className='rounded-xl shadow-md w-full border text-blue-900 border-blue-900 border-x-8 p-4' data-aos="zoom-in-left" data-aos-delay="300" data-aos-duration="800">
                     <span className="text-xl font-bold">Quick Contact</span>
                     <input type="text" placeholder="Email" class="input text-blue-900 input-bordered border-blue-900 input-blue-900 w-full" />
                     <button className='btn btn-blue-900 text-white'>submit</button>

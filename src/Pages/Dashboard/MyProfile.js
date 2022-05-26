@@ -9,24 +9,24 @@ const MyProfile = () => {
     return (
         <div>
             <h1 className='text-2xl font-bold text-primary text-center'>My Profile</h1>
-            <div class="card w-[100%] mt-16 mx-auto lg:w-[500px] bg-base-100 border-8 border border-blue-200 rounded-2xl shadow-xl" data-aos="zoom-in-up" data-aos-delay="100" data-aos-duration="800">
+            <div class="card w-[100%] mt-16 mx-auto lg:w-[500px] bg-base-100 border-8 border border-blue-900 rounded-2xl shadow-xl" data-aos="zoom-in-up" data-aos-delay="100" data-aos-duration="800">
                 <div className="avatar mt-5">
                     <div class="w-28 mx-auto rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                         { user.photoURL? <img src={user.photoURL} alt='Profile pic' /> : <img src={profile} alt='Profile pickter' />}
                     </div>
                 </div>
-                <div class="card-body items-center text-center">
+                <div class="py-4 px-2  items-center text-center">
                     <h2 class="text-3xl text-primary font-bold">{user.displayName}</h2>
                     <h2 class="text-xl text-primary font-bold">{user.email}</h2>
-                    <p>I am a student of class inter 2nd Year Hazi Nurul Haque Nonni poragong Mointri collage</p>
-                    <div class="card-actions">
+                    <p className='my-2'>I am a student of class inter 2nd Year Hazi Nurul Haque Nonni poragong Mointri collage</p>
+                    <div class="card-actions justify-center">
                     <a href="tel:+0183194559" ><button className='btn btn-primary font-bold btn-sm'><AiFillPhone /> +0183194559 </button></a>
-                    <button class="btn btn-sm btn-secondary">Update Profile</button>
+                    <button class="btn text-white btn-sm btn-secondary">Update Profile</button>
                     </div>
                 </div>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-10">
-                <div className="border p-3 border-x-8 my-10 border-blue-200 rounded-2xl shadow-xl">
+                <div className="border p-3 border-x-8 my-5 border-blue-200 rounded-2xl shadow-xl">
                     <h1 className='text-primary mb-5 font-bold text-2xl'>Contact Information</h1>
                     <div className="grid gap-2">
                         <div className="">
@@ -49,7 +49,7 @@ const MyProfile = () => {
                     </div>
                 </div>
                 
-                <div className="border p-3 border-x-8 my-10 border-blue-200 rounded-2xl shadow-xl">
+                <div className="border p-3 border-x-8 my-5 border-blue-200 rounded-2xl shadow-xl">
                     <h1 className='text-primary mb-5 font-bold text-2xl'>Educational Skills</h1>
                     <div className="grid gap-2">
                         <div className="">

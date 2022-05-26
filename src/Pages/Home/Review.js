@@ -14,8 +14,8 @@ const Review = () => {
     }
     return (
         <div className='my-10'>
-            <h1 className='text-4xl font-bold text-center my-8'>See What Our Customers Say About Us</h1>
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <h1 className='lg:text-4xl text-2xl font-bold text-center my-8'>See What Our Customers Say About Us</h1>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {
                     reviews?.slice(0, 8).map(review => <ReviewCard
                         key={review._id}

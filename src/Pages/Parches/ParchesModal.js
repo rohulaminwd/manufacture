@@ -59,18 +59,18 @@ const ParchesModal = ({order, setOrder}) => {
                                 <input type="text" value={email} disabled class="input input-bordered font-bold w-full" />
                             </div>
                         </div>
-                        <div className="sm:flex justify-between">
-                            <div class="form-control sm:w-[48%]">
+                        <div className="flex justify-between">
+                            <div class="form-control w-[48%] max-w-xs">
                                 <label class="label">
                                     <span class="label-text font-bold">Price</span>
                                 </label>
-                                <input type="text" value={price} disabled class="input input-bordered font-bold w-full" />
+                                <input type="text" value={price} disabled class="input input-bordered font-bold w-full max-w-xs" />
                             </div>
-                            <div class="form-control sm:w-[48%] ">
+                            <div class="form-control w-[48%] max-w-xs">
                                 <label class="label">
                                     <span class="label-text font-bold">Quantity</span>
                                 </label>
-                                <input type="text" value={quantity} disabled class="input input-bordered font-bold w-full" />
+                                <input type="text" value={quantity} disabled class="input input-bordered font-bold w-full max-w-xs" />
                             </div>
                         </div>
                         <div className="flex justify-between">

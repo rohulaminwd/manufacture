@@ -9,16 +9,16 @@ import Tools from './Tools';
 
 const Home = () => {
     return (
-        <>
-        <Banner></Banner>
-        <div className='mx-4 md:mx-8 lg:mx-16'>
-            <Tools></Tools>
-            <Review />
-            <BusnessSummery />
-            <Barand />
+        <div className="max-w-7xl mx-auto">
+            <Banner></Banner>
+            <div className='mx-4 md:mx-8 lg:mx-16'>
+                <Tools></Tools>
+                <Review />
+                <BusnessSummery />
+                <Barand />
+            </div>
+            <Footer />
         </div>
-        <Footer />
-        </>
     );
 };
 

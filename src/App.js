@@ -36,6 +36,7 @@ function App() {
         <Route path='/blog' element={<Blog />}></Route>
         <Route path='/Portfolio' element={<Protfolio />}></Route>
         <Route path='/signup' element={<SignUp />}></Route>
+        {/* <Route path='/dashboard2' element={<Dashboard2 />}></Route> */}
         <Route path='/parses/:id' element={
           <RequireAuth><Parches /></RequireAuth>
         }></Route>
